@@ -42,3 +42,20 @@ const Component = () => {
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
 ```
+
+---
+
+## 06-Tabs
+
+#### IN ACTION
+
+[Portfolio](https://gatsby-strapi-portfolio-project.netlify.app/)
+
+#### Content
+
+- fetch data from external url async, await.
+- useEffect for initialization
+- conditional rendering
+- conditional styling
+
+---
