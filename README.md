@@ -4,7 +4,7 @@
 
 [uidesigndaily](https://uidesigndaily.com/posts/sketch-accordion-website-day-1175)
 
-![](./idea.png);
+![](./04-accordion/idea.png)
 
 #### React Icons
 
@@ -27,3 +27,18 @@ const Component = () => {
 - useState
 - ternary
 - show\hide short-circuit-and
+
+---
+
+## 05-Menu
+
+#### Content
+
+- useState
+- filtering components
+- pattern to extract objects unique values to array.
+
+```
+const allCategories = ["all", ...new Set(items.map((item) => item.category))];
+
+```
