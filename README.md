@@ -59,3 +59,17 @@ const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 - conditional styling
 
 ---
+
+## 07-Slider
+
+#### IN ACTION
+
+[Gatsby-Airtable Project](https://gatsby-airtable-design-project.netlify.app/)
+
+#### Content
+
+- multiple useEffect
+- useEffect on specific var
+- useEffect cleanup
+
+---
