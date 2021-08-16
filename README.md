@@ -73,3 +73,14 @@ const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 - useEffect cleanup
 
 ---
+
+## 08-Lorem-Ipsum
+
+#### Content
+
+- form handle single input
+- handle submit -> preventDefault
+- input return string
+- parseInt
+
+---
