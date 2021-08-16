@@ -84,3 +84,63 @@ const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 - parseInt
 
 ---
+
+## 09-Color-Generator
+
+#### Values JS
+
+[values.js](https://github.com/noeldelgado/values.js)
+
+#### Content
+
+- form handle single input
+- handle submit -> preventDefault
+- input return string
+- parseInt
+- fragment component
+- conditional class
+
+```
+className={`color ${index > 10 && "color-light"}`}
+```
+
+- array.join()
+
+```
+  const arr = [3,4,5];
+  const join_arr = arr.join('.') // join_arr = '3.4.5'
+```
+
+- inline compoponent style
+
+```
+<article
+  className={`color`}
+  style={{ backgroundColor: `rgb(${bcg})` }}
+>
+</article>
+
+```
+
+- rgbToHex function
+- copy value to clipboard
+
+```
+navigator.clipboard.writeText(hexValue)
+```
+
+- color.hex -> not possible to destructure nont iterable property. instead send it to child as specific param.
+
+```
+<SingleColor
+              key={index}
+              {...color}
+              hex={color.hex}
+              index={index}
+            >
+</SingleColor>
+```
+
+- useEffect cleanup, activated if component is unmounted.
+
+---
