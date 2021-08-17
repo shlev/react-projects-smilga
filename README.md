@@ -145,7 +145,7 @@ navigator.clipboard.writeText(hexValue)
 
 ---
 
-## 09-Grocery-Bud
+## 10-Grocery-Bud
 
 #### Content
 
@@ -156,3 +156,18 @@ navigator.clipboard.writeText(hexValue)
 - array.find
 - componenet useEffect dependancy
 - localStorage
+- useEffect for initialization
+
+## 11-navbar
+
+#### Content
+
+- img import
+
+```
+import logo from "./logo.svg";
+
+<img src={logo} alt="logo" />
+```
+
+- useRef to get element ref , for styling
