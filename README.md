@@ -144,3 +144,15 @@ navigator.clipboard.writeText(hexValue)
 - useEffect cleanup, activated if component is unmounted.
 
 ---
+
+## 09-Grocery-Bud
+
+#### Content
+
+- conditional rendering
+- list managment, add ,edit ,delete.
+- function default values
+- array.filter
+- array.find
+- componenet useEffect dependancy
+- localStorage
