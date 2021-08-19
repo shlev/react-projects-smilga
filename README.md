@@ -171,3 +171,13 @@ import logo from "./logo.svg";
 ```
 
 - useRef to get element ref , for styling
+
+## 12-sidebar-modal
+
+#### Content
+
+- context hook
+- AppContext
+- children
+- custom hook
+- pass object in hook
