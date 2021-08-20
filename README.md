@@ -181,3 +181,14 @@ import logo from "./logo.svg";
 - children
 - custom hook
 - pass object in hook
+
+## 12-sidebar-modal
+
+#### Content
+
+- context hook
+- useRef
+- useContext
+- inline style
+- events mouseover, click
+- getBoundingClientRect for location ref.
