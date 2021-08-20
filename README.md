@@ -182,7 +182,7 @@ import logo from "./logo.svg";
 - custom hook
 - pass object in hook
 
-## 12-sidebar-modal
+## 13-stripe-submenus
 
 #### Content
 
@@ -192,3 +192,19 @@ import logo from "./logo.svg";
 - inline style
 - events mouseover, click
 - getBoundingClientRect for location ref.
+
+## 14-cart
+
+#### Content
+
+- useReducer - used for state managment
+
+  state - object of states
+  dispatch - functionality for updating states.
+
+  - type -> action type
+  - action -> arguments
+
+```
+  const [state, dispatch] = useReducer(reducer, initialState);
+```
