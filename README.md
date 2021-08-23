@@ -360,3 +360,30 @@ import logo from "./logo.svg";
   ```
   const newTitle = e.target.dataset.label;
   ```
+
+## 18-Pagination
+
+#### Content
+
+- custom hook
+
+```
+   const { loading, data } = useFetch();
+
+```
+
+- conditional rendering
+
+```
+        <h1>{loading ? "loading..." : "pagination"}</h1>
+
+```
+
+- convert array to array of arrays
+
+```
+const newFollowers = Array.from({ length: pages }, (_, index) => {
+    const start = index * itemsPerPage;
+    return followers.slice(start, start + itemsPerPage);
+  });
+```
