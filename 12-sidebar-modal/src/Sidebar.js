@@ -5,8 +5,8 @@ import { social, links } from "./data";
 import { useGlobalContext } from "./context";
 
 const Sidebar = () => {
+  console.log(useGlobalContext());
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
-  console.log("IsSidebarOpen:" + isSidebarOpen);
   return (
     <aside className={`sidebar ${isSidebarOpen && "show-sidebar"} `}>
       <div className="sidebar-header">
