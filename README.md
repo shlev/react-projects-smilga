@@ -331,3 +331,32 @@ import logo from "./logo.svg";
   ```
     <ReactMarkdown>{markdown}</ReactMarkdown>
   ```
+
+## 17-Random-Person
+
+- [random user api](https://randomuser.me/api)
+
+#### Content
+
+- conditional render (loading)
+- useState
+- useEffect
+- destructure api object
+- read data dom object value
+
+  - component
+
+  ```
+  <button
+        key={index}
+        className="icon"
+        data-label={`${label}`}
+        onMouseEnter={handleValue}
+      ></button>
+  ```
+
+  - js read data value
+
+  ```
+  const newTitle = e.target.dataset.label;
+  ```
