@@ -208,3 +208,97 @@ import logo from "./logo.svg";
 ```
   const [state, dispatch] = useReducer(reducer, initialState);
 ```
+
+## 15-cocktails
+
+#### React Router Fix
+
+(Fix)[https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc]
+
+#### CRA Fix
+
+```
+
+"build": "CI= react-scripts build",
+
+```
+
+#### Content
+
+- ##### Route (react-route-dom)
+
+  - BrowserRouter contain
+
+    - linking components
+
+      ```
+      <Link to="{destination}"></dd>
+      ```
+
+    - routing components destinations
+
+      - **Switch** to select from **Route** options , similar to reguler switch
+      - **path="\*"** similar to regular switch default
+      - **exact** if not used it will be routed when it is part of other path like "/about" will call "/" and "/about"
+
+      ```
+      <Switch>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+        <Route path="/about">
+          <About></About>
+        </Route>
+        <Route path="*">
+          <Error></Error>
+        </Route>
+      </Switch>
+      ```
+
+      - extract api data to more convinient object by destructure and build new object
+
+      ```
+      const newCocktails = drinks.map((item) => {
+          const { idDrink, strDrink, strDrinkThumb, strAlcoholic, strGlass } = item;
+          return {
+            id: idDrink,
+            name: strDrink,
+            image: strDrinkThumb,
+            info: strAlcoholic,
+            glass: strGlass,
+          };
+      ```
+
+      - context provider to transfer objects without prop drilling
+
+      - uncontrolled input with useRef
+
+      ```
+        const searchValue = React.useRef("");
+        .
+        const searchCocktail = () => {
+          setSearchTerm(searchValue.current.value);
+          };
+        .
+        <input
+            type="text"
+            id="name"
+            ref={searchValue}
+            onChange={searchCocktail}
+          />
+      ```
+
+      - useParams - to use url trnsfered params
+        App.js
+
+      ```
+        <Route path="/cocktail/:id">
+          <SingleCocktail />
+        </Route>
+      ```
+
+      SingleCocktail.js
+
+      ```
+        const { id } = useParams();
+      ```
