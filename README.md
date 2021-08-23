@@ -302,3 +302,32 @@ import logo from "./logo.svg";
       ```
         const { id } = useParams();
       ```
+
+## 16-Markdown-Preview
+
+#### markdown cheetsheet
+
+- [cheet-sheet](https://www.markdownguide.org/cheat-sheet)
+
+#### Content
+
+- use markdown component package
+  ```
+    npm install react-markdown
+  ```
+- controlled input
+
+  ```
+    useState(markdown, setMardown)
+
+    <textarea>
+      value={markdown}
+      onChange={(e) => setMarkdown(e.target.value)}
+    </textarea>
+  ```
+
+  - convert to markdown
+
+  ```
+    <ReactMarkdown>{markdown}</ReactMarkdown>
+  ```
