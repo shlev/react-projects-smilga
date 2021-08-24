@@ -387,3 +387,28 @@ const newFollowers = Array.from({ length: pages }, (_, index) => {
     return followers.slice(start, start + itemsPerPage);
   });
 ```
+
+## 19-Stock-Photos
+
+- [env react](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+
+#### Content
+
+- enviroment vars key=value key must start with `REACT_APP_`
+- scrollEvent add and remove when compoenents is off
+
+```
+ useEffect(() => {
+   const event = window.addEventListener("scroll", () => {
+     if (
+       !loading &&
+       window.innerHeight + window.scrollY >= document.body.scrollHeight - 200
+     ) {
+       setPage((oldPage) => {
+         return oldPage + 1;
+       });
+     }
+   });
+   return () => window.removeEventListener("scroll", event);
+ }, []);
+```
