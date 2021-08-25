@@ -412,3 +412,37 @@ const newFollowers = Array.from({ length: pages }, (_, index) => {
    return () => window.removeEventListener("scroll", event);
  }, []);
 ```
+
+## Dark-Mode
+
+#### Content
+
+- momentJs to format date
+- set html tag
+
+  ```
+  document.documentElement.classList = mode;
+  ```
+
+- setting css varibles by class
+
+```
+.dark-theme {
+  --clr-bcg: #282c35;
+  --clr-font: #fff;
+  --clr-primary: #ffa7c4;
+}
+
+.light-theme {
+  --clr-bcg: #fff;
+  --clr-font: #282c35;
+  --clr-primary: #ffa7c4;
+}
+
+```
+
+- save theme to localStorage
+
+## Movie DB
+
+####
