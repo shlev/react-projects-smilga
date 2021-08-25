@@ -1,36 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { API_ENDPOINT } from "./context";
-
+import useFetch from "./useFetch";
 const SingleMovie = () => {
   const { id } = useParams();
-  const [loading, setLoading] = useState(true);
-  const [movie, setMovie] = useState(null);
-  const [error, setError] = useState({ show: false, msg: "" });
-
-  const getMovie = async () => {
-    const url = `${API_ENDPOINT}&i=${id}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    if (data.Response === "True") {
-      const {
-        Poster: image,
-        Title: title,
-        Plot: description,
-        Year: year,
-      } = data;
-      const newMovie = { image, title, description, year };
-      setMovie(newMovie);
-      setLoading(false);
-      setError({ show: false, msg: "" });
-    } else {
-      setError({ show: true, msg: data.Error });
-    }
-  };
-  useEffect(() => {
-    setLoading(true);
-    getMovie();
-  }, [id]);
+  const { loading, error, data: movie } = useFetch(`&i=${id}`);
 
   if (loading) {
     return <div className="loading"></div>;
@@ -45,7 +18,8 @@ const SingleMovie = () => {
     );
   }
 
-  const { image, title, description, year } = movie;
+  const { Poster: image, Title: title, Plot: description, Year: year } = movie;
+
   return (
     <section className="single-movie">
       <img src={image} alt={title} />
